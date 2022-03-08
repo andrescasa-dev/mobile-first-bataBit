@@ -34,6 +34,7 @@ to do
 */
 
 header{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +55,6 @@ header > img{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   width: 90%;
   min-width: 288px;
   margin-top:  36px;
@@ -77,10 +77,11 @@ header > img{
 }
 
 .header__takeAction{
+  position: absolute;
   display: flex;
+  top: calc(100% - (48px/2));
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
   width: 229px;
   height: 48px;
   text-decoration: none;
@@ -108,7 +109,9 @@ main{
   flex-direction: column;
   text-align: center;
   align-items: center;
+  padding-bottom: 65px;
 }
+
 
 .exchange-container > img{  
   margin-top: 59px;
@@ -117,11 +120,12 @@ main{
 
 .exchange-container__title{
   margin-top: 40px;
+  max-width: 700px;
 }
 
 .exchange-container__title h2{
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 26px;
   color: var(--warm-black);
 }
@@ -129,7 +133,7 @@ main{
 .exchange-container__title p{
   margin-top: 24px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 18px;
   color: var(--dark-gray);
 }
@@ -141,18 +145,16 @@ main{
   gap: 12px;
 }
 
+.conatiner-monedas > h3{
+  margin-left: 10px;
+}
+
 .conatiner-monedas__grid{
   display: grid;
   grid-template-columns: repeat(2, 95px);
   grid-template-rows: repeat(4, 39px);
   gap: 2px;
 }
-
-
-.conatiner-monedas__grid div *{
-  padding: 10px;
-}
-
 .conatiner-monedas__grid :nth-child(1){
   border-radius: 8px 0px 0px 0px;
 }
@@ -169,8 +171,13 @@ main{
   border-radius: 0px 0px 8px 0px;
 }
 
-.conatiner-monedas__grid > :nth-child(1){
-  background-color: #1A9AF7;
+.conatiner-monedas__grid span{
+  margin-left: 10px;
+  content: url("./assets/icons/trending-up.svg");
+}
+
+.conatiner-monedas__grid :nth-child(4) span{
+  content: url("./assets/icons/trending-down.svg");
 }
 
 .conatiner-monedas__grid div{
@@ -179,19 +186,35 @@ main{
   background-color: var(--white);
 }
 
+.conatiner-monedas__grid > div >*{
+  padding: 10px;
+}
+
 .conatiner-monedas__grid h3{
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-align: left;
   letter-spacing: -0.02em;
   color: var(--grey);
 }
 
-
 .conatiner-monedas__grid p{
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--dark-gray);
 }
 
+.conatiner-monedas > h3{
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 23px;
+  color: var(--bitcoin-orange);
+}
+
+.conatiner-monedas > p{
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
