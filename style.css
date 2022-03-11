@@ -20,6 +20,7 @@
 html{
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* 
@@ -72,7 +73,7 @@ header > img{
   margin-top: 24px;
   font-weight: 500;
   font-size: 1.4rem;
-  line-height: 18px;
+  line-height: 1.8rem;
   color: var(--soft-orange);
 }
 
@@ -92,6 +93,7 @@ header > img{
   background-color: var(--white);
   border-radius: 4px;
   box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  
 }
 
 .header__takeAction span{
@@ -375,4 +377,133 @@ main{
   font-size: 2.4rem;
   line-height: 2.6rem;
   color: var(--white);  
+}
+
+.main-pricing{
+  padding: 64px 15px;
+  min-height: 409px;
+}
+
+.main-pricing__title{
+  text-align: center;
+}
+
+.main-pricing__title :last-child{
+  margin-top: 24px;
+}
+
+.main-pricing__carrousel{
+  margin-top: 50px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.main-pricing__card{
+  height: 247px;
+  min-width: 190px;
+  max-width: 266px;
+  scroll-snap-align: center;
+  width: 60%;
+  position: relative;
+  padding: 24px 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  text-align: center;
+}
+
+.main-pricing__card > p {
+  position: absolute;
+  top: -15px;
+  left: calc(50% - 50px);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--bitcoin-orange);
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.main-pricing__card--price{
+  position: relative;
+}
+
+.main-pricing__card--price h3{
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 11px;
+}
+
+.main-pricing__card--price p:first-of-type{
+  margin-top: 8px;
+  display: inline-block;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 6.3rem;
+  letter-spacing: -0.08em;
+}
+
+.main-pricing__card--price span{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  vertical-align: 25px;
+  
+}
+
+.main-pricing__card .secondary-text{
+  margin-top: 16px;
+}
+
+.main-pricing__card button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 21px 16px 16px;
+  background: var(--off-white);
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.main-pricing__card button span{
+  content: url('./assets/icons/arrow-right.svg');
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 150px;
+  padding: 0px 65px;
+  background-color: var(--bitcoin-orange);
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer ul li a{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
 }
