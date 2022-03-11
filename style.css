@@ -322,7 +322,7 @@ main{
 .main-product-detail__card{
   min-width: 256px;
   max-width: 400px;
-  height: 152px;
+  min-height: 152px;
   margin-top: 16px; 
   background-color: var(--warm-black);
   border-radius: 3px;
@@ -359,4 +359,20 @@ main{
   font-size: 1.8rem;
   margin-top: 12px;
   margin-bottom: 10px;
+}
+
+.main-image-transition-section{
+  padding-top: 64px;
+  text-align: center;
+  height: 387px;
+  background-image: url('./assets/images/person.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.main-image-transition-section h2{
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  color: var(--white);  
 }
