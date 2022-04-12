@@ -61,6 +61,9 @@ header > img{
   margin-top:  36px;
   
 }
+.clickable{
+  cursor: pointer;
+}
 
 .header__title-container > h1{
   font-weight: 700;
@@ -145,10 +148,36 @@ main{
 }
 
 .coins-section__scroll-tables{
+
   display: flex;
   width: 190px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+}
+
+.conatiner-monedas__wrapper{
+  display: flex;
+  --n: 1;
+  --i: 0;
+  --extra: 0px;
+  width: calc(100% * var(--n));
+  transform: translateX(
+    calc( 
+      (var(--i) / var(--n)) * -100% + var(--extra)
+      ) 
+  );
+}
+
+.conatiner-monedas__wrapper > *{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  pointer-events: none;
+}
+
+.smooth{
+  transition: transform 0.3s ease-out;
 }
 
 .conatiner-monedas{
@@ -314,11 +343,15 @@ main{
   color: var(--dark-gray);
 }
 
-.main-product-detail__cards-cointainer{
+
+.main-product-detail__cards-cointainer {
   margin-top: 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 878px;
+  margin: 0 auto;
 }
 
 .main-product-detail__card{
